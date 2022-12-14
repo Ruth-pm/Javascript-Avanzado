@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    text-align: center;
+}
+h2{
+    margin-bottom: 2rem;
+}
+form{
+    width: 100%;
+    display: flex;
+}
+input{
+    margin-bottom: 1rem;
+    margin-top: 4px;
+}
+input.ng-invalid {
+    border-color: #df222f;
+    border-width: 3px;
+}
+input.ng-valid {
+    border-color: #07ad07;
+    border-width: 3px;   
+}
+
+.btn{
+    /* margin-top: 1rem; */
+    width: 15rem;
+    padding: 0.6rem 0;
+    font-weight: 500;
+}

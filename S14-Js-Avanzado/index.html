@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S14-AngularJs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="formCtrl" class="container mt-5 ">
+        <h2 class="text-danger">SUELDO DE EMPLEADO</h2>
+        <form name="myForm" class="row g-4"><hr>
+            <div class="col-md-3">
+            Código: 
+            <input type="text" class="form-control" ng-model="codigo" required>
+            </div>
+            <div class="col-md-3">
+            Nombre: 
+            <input type="text" class="form-control" ng-model="nombre" required>
+            </div>
+            <div class="col-md-3">
+            Horas trabajadas: 
+            <input type="text" class="form-control" ng-model="horas" required>
+            </div>
+            <div class="col-md-3">
+            Tarifa por Hora: 
+            <input type="text" class="form-control" ng-model="tarifaxH" required>
+            </div><hr>
+            <div class="col-12">
+            <button ng-click="calcular()" class="btn btn-primary">CALCULAR</button></div>
+        </form>
+        <br>
+        <p>Estimado(a): {{nombre}}, a usted le corresponde lo siguiente:</p>
+        <p><b> SALARIO BÁSICO:</b>  S/. {{salarioB()}}</p>
+        <p><b> DESCUENTO DE {{descuento}}% :</b> S/. {{desc()}}</p>
+        <p><b> SALARIO NETO:</b> S/.  {{pagoFinal()}}</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
