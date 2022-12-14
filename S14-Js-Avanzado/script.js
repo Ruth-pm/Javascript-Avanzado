@@ -34,9 +34,5 @@ app.controller("formCtrl", function($scope){
                 return 0;
             }
         }
-
-       $scope.pagoFinal = function() {
-        return $scope.salarioB() - $scope.desc();
-       };
     };
 });
