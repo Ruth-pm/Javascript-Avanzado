@@ -1,0 +1,36 @@
+###
+POST http://localhost:9000/api/clientes HTTP/1.1
+Content-Type: application/json
+
+{
+    "nomb_cliente": "Mauricio Armando",
+    "telefono": 8432005699,
+    "ciudad": "Lima",
+    "calle": "Miraflores",
+    "numero": 2154,
+    "estado": "Lima",
+    "fecha_nacimiento": "11/12/1975"
+}
+
+###
+GET http://localhost:9000/api/clientes HTTP/1.1
+
+###
+GET http://localhost:9000/api/clientes/639bcae86788f2da61d3c934 HTTP/1.1
+
+###
+PUT  http://localhost:9000/api/clientes/639bcbbf6788f2da61d3c936 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nomb_cliente": "Cristina Mendez",
+    "telefono": 7892561790,
+    "ciudad": "Veracruz",
+    "calle": "San Juan",
+    "numero": 1770,
+    "estado": "Veracruz",
+    "fecha_nacimiento": "31/11/1990"
+}
+
+###
+DELETE  http://localhost:9000/api/clientes/639cda7b9f7eaf804ef62612 HTTP/1.1
